@@ -8,37 +8,42 @@ const Signup = () => {
     e.preventDefault();
   };
 
+
+
   return (
     <div>
       <div className="mt-4">
-        <h2>Sign Up</h2>
+        <h2>Employee Directory</h2>
       </div>
       <form onSubmit={handleSubmit}>
         <Container className="mt-3 px-5">
           <Row className="form-group">
             <Col size="12">
-              <input className="form-control" type="text" placeholder="Username" name="username" />
+
             </Col>
           </Row>
           <Row className="form-group">
             <Col size="12">
-              <input
-                className="form-control"
-                type="password"
-                placeholder="Password"
-                name="password"
-              />
+              <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action " onClick {
+                  document.getElementById('p2').innerHTML = "Employee information"
+                }>Employee 1</button>
+                <button type="button" class="list-group-item list-group-item-action ">Employee 2</button>
+                <button type="button" class="list-group-item list-group-item-action ">Employee 3</button>
+                <button type="button" class="list-group-item list-group-item-action ">Employee 4</button>
+
+              </div>
             </Col>
           </Row>
-          <button className="btn btn-success" type="submit">
-            Submit
-          </button>
+
         </Container>
         <Container className="mt-4">
-          <h3>Hello NAME_HERE!</h3>
-          <p>I probably shouldn't tell you this, but your password is PASSWORD_HERE}!</p>
+          <h3>Hey Boss!</h3>
+          <p>After clicking on an Employee their information goes down here!!</p>
         </Container>
       </form>
+
+      <p2></p2>
     </div>
   );
 };
